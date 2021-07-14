@@ -12,6 +12,12 @@ let mobileMenu = document.querySelector(".mobile-menu");
 
 hamburgerMenu.addEventListener('click', function () {
     mobileMenu.classList.toggle("mobile-menu--active");
+
+    if (mobileMenu.classList.contains("mobile-menu--active")) {
+        hamburgerMenuImg.src = "/images/icon-close.svg";
+    } else {
+        hamburgerMenuImg.src = "/images/icon-hamburger.svg";
+    }
 });
 
 // HAMBURGER-MENU LIST ITENS TOGGLE

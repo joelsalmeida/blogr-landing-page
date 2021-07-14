@@ -1,4 +1,4 @@
-@use "variables" as *;
+@use "variables" as *; @use "mixins" as *;
 
 // ** MAIN
 
@@ -40,33 +40,20 @@ main {
 
 // LOGIN SIGN UP BUTTON
 
-.login {
-    display: block;
-    margin: 0 auto;
-    text-decoration: none;
-    border: none;
-    font-size: 1.5rem;
+.login-button {
+    @include button-base;
     background-color: white;
     color: $veryDarkDesaturatedBlue;
-    border-radius: 3em;
-    font-family: "Ubuntu", sans-serif;
-    padding: 0.7em 2.3em;
+    margin-bottom: 0.5em;
     &:hover {
         background-color: hsl(0, 0%, 95%);
     }
 }
 
-.sign-up {
-    display: block;
-    margin: 0 auto;
-    text-decoration: none;
-    border: none;
-    font-size: 1.5rem;
+.sign-up-button {
+    @include button-base;
     background-image: linear-gradient(45deg ,#ff7a85, #ff525d);
     color: $white;
-    border-radius: 3em;
-    font-family: "Ubuntu", sans-serif;
-    padding: 0.7em 2em;
     &:hover {
         background-color: $veryLightRed;
         background-image: none;

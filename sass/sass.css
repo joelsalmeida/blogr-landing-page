@@ -32,35 +32,36 @@ main {
   margin-left: 1em;
 }
 
-.login {
+.login-button {
   display: block;
   margin: 0 auto;
-  text-decoration: none;
+  padding: 0.7em 2.3em;
   border: none;
+  font-family: "Ubuntu", sans-serif;
   font-size: 1.5rem;
+  text-decoration: none;
+  border-radius: 3em;
   background-color: white;
   color: #3f4164;
-  border-radius: 3em;
-  font-family: "Ubuntu", sans-serif;
-  padding: 0.7em 2.3em;
+  margin-bottom: 0.5em;
 }
-.login:hover {
+.login-button:hover {
   background-color: #f2f2f2;
 }
 
-.sign-up {
+.sign-up-button {
   display: block;
   margin: 0 auto;
-  text-decoration: none;
+  padding: 0.7em 2.3em;
   border: none;
+  font-family: "Ubuntu", sans-serif;
   font-size: 1.5rem;
+  text-decoration: none;
+  border-radius: 3em;
   background-image: linear-gradient(45deg, #ff7a85, #ff525d);
   color: white;
-  border-radius: 3em;
-  font-family: "Ubuntu", sans-serif;
-  padding: 0.7em 2em;
 }
-.sign-up:hover {
+.sign-up-button:hover {
   background-color: #ff7a85;
   background-image: none;
   cursor: pointer;
@@ -104,6 +105,7 @@ body {
   z-index: 3;
   display: flex;
   width: 100%;
+  height: 7em;
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
@@ -161,6 +163,12 @@ body {
   background-color: #f1f1f4;
   padding: 2em 0;
   border-radius: 10px;
+}
+.top-nav__sub-list a {
+  color: #4b5862;
+}
+.top-nav__sub-list a:hover {
+  color: #2c2d3f;
 }
 
 .list-arrow {
@@ -227,10 +235,10 @@ body {
 }
 
 .section__content {
-  font-size: 1.7rem;
-  line-height: 180%;
   padding-left: 2em;
   padding-right: 2em;
+  font-size: 1.7rem;
+  line-height: 180%;
   padding-bottom: 2.5em;
   color: #4b5862;
 }
