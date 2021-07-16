@@ -110,12 +110,80 @@ body {
   align-items: center;
   padding: 2rem;
 }
+@media (min-width: 1024px) {
+  .top-header {
+    justify-content: flex-start;
+  }
+}
+
+.desktop-menu {
+  display: none;
+  padding-left: 4em;
+}
+@media (min-width: 1024px) {
+  .desktop-menu {
+    display: flex;
+  }
+}
+.desktop-menu ul, .desktop-menu li {
+  list-style: none;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+.desktop-menu a {
+  color: white;
+  text-decoration: none;
+}
+.desktop-menu a:hover {
+  text-decoration: underline;
+}
+
+.desktop-menu-main {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding-right: 2em;
+}
+
+.desktop-menu-active .desktop-menu__sub-list {
+  display: block;
+  position: absolute;
+  top: 12%;
+  transform: translateX(-2em);
+  background: white;
+  min-width: 10em;
+  padding: 2em;
+  border-radius: 10px;
+}
+.desktop-menu-active .desktop-menu__sub-list a {
+  color: #25252d;
+}
+.desktop-menu-active .desktop-menu__sub-list a:hover {
+  font-weight: 600;
+}
+
+.desktop-menu__main-list {
+  display: flex;
+}
+
+.desktop-menu__sub-list {
+  display: none;
+}
+
+.login-sign-up-desktop {
+  display: flex;
+}
 
 .hamburger-menu {
   padding: 10px;
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+@media (min-width: 1024px) {
+  .hamburger-menu {
+    display: none;
+  }
 }
 
 .mobile-menu {
@@ -146,6 +214,11 @@ body {
 
 .mobile-menu--active {
   display: block;
+}
+@media (min-width: 1024px) {
+  .mobile-menu--active {
+    display: none;
+  }
 }
 
 .top-nav__main-list {
@@ -252,7 +325,7 @@ body {
   color: white;
   padding: 10em 2em;
   margin-top: 300px;
-  background-image: url("./images/bg-pattern-circles.svg"), linear-gradient(135deg, #3f4164, #2c2d3f);
+  background-image: url("images/bg-pattern-circles.svg"), linear-gradient(135deg, #3f4164, #2c2d3f);
   background-position-y: -400px, 0;
   background-position-x: -190px, 0;
   background-repeat: no-repeat;

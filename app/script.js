@@ -27,3 +27,16 @@ for (let index = 0; index < navMainList.length; index++) {
         this.classList.toggle("top-nav__main-list--active");
     })
 }
+
+
+// ** DESKTOP MENU FUNCTIONS
+
+let desktopMenu = document.getElementsByClassName("desktop-menu-main");
+
+let desktopMenuSub = document.querySelector(".desktop-menu__sub-list");
+
+for (let index = 0; index < desktopMenu.length; index++) {
+    desktopMenu[index].addEventListener("click", function() {
+        this.classList.toggle("desktop-menu-active");
+    })
+}
