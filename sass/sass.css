@@ -116,7 +116,7 @@ body {
   display: none;
 }
 .mobile-menu__list-button p::after {
-  background-image: url("/images/icon-arrow-dark.svg");
+  background-image: url("images/icon-arrow-dark.svg");
   display: inline-block;
   content: " ";
   width: 10px;
@@ -158,7 +158,7 @@ body {
   text-decoration: underline;
 }
 .desktop-menu__list-button p::after {
-  background-image: url("/images/icon-arrow-light.svg");
+  background-image: url("images/icon-arrow-light.svg");
   display: inline-block;
   content: " ";
   width: 10px;
