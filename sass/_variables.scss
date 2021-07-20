@@ -1,0 +1,47 @@
+// ** FONTS
+
+$fontMain: 'Overpass', sans-serif;
+
+$fontDetail: 'Ubuntu', sans-serif;
+
+
+// ** PRIMARY COLORS
+
+$priRed: hsl(356, 100%, 66%);
+
+$priLightRed: hsl(355, 100%, 74%);
+
+$priDarkBlue: hsl(208, 49%, 24%);
+
+
+// ** NEUTRAL COLORS
+
+$neuWhite: hsl(0, 0%, 100%);
+
+$neuBlue: hsl(240, 2%, 79%);
+
+$neuDarkBlue: hsl(207, 13%, 34%);
+
+$neuVeryDarkBlue: hsl(240, 10%, 16%);
+
+
+// ** GRADIENT COLORS
+
+// Background gradient - Intro/CTA mobile nav:
+
+$graLightRed: hsl(13, 100%, 72%);
+
+$graRed: hsl(353, 100%, 62%);
+
+// Background gradient - body:
+
+$graBlue: hsl(237, 17%, 21%);
+
+$graDesaturatedBlue: hsl(237, 23%, 32%);
+
+
+// ** SCREEN SIZES
+
+$smallScreens: 1024px;
+
+$largeScreens: 1025px;

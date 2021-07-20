@@ -1,0 +1,22 @@
+@use "variables"as *;
+@use "reset"as *;
+@use "globals"as *;
+@use "header" as *;
+@use "mixins" as *;
+
+// ** SECTIONS
+
+.section {
+    width: 100%;
+    text-align: center;
+    @include verticalPadding(7rem);
+}
+
+.full-width--top {
+    background-image: url("/images/bg-pattern-intro.svg"),
+    linear-gradient(135deg, $graLightRed, $graRed);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 30% 55%; 
+    border-bottom-left-radius: 100px;
+}

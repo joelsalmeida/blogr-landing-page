@@ -1,0 +1,15 @@
+// ** MIXINS
+
+@mixin horizontalPadding($size) {
+    padding-left: $size;
+    padding-right: $size;
+}
+
+@mixin verticalPadding($size) {
+    padding-top: $size;
+    padding-bottom: $size;
+}
+
+@mixin borderRadiusSmall {
+    border-radius: 7px;
+}

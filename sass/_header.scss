@@ -1,0 +1,213 @@
+@use "variables"as *;
+@use "reset"as *;
+@use "globals"as *;
+@use  "mixins" as *;
+
+// ** HEADER
+
+.header {
+    display: flex;
+    width: 100%;
+    padding-top: 3.5rem;
+    padding-bottom: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+    
+    &__logo img {
+        width: 85px;
+        height: auto;
+    }
+}
+
+
+// ** HAMBURGER MENU
+
+.hamburger-menu {
+    z-index: 2;
+    cursor: pointer;
+    @include verticalPadding(7px);
+    span {
+        display: block;
+        width: 32px;
+        height: 2px;
+        background-color: $neuWhite;
+        transition: 0.1s ease-in-out;
+    }
+    span + span {
+        margin-top: 6px;
+    }
+}
+
+// Hamburger menu active
+
+.hamburger-menu--active {
+    span:first-child {
+        transform: rotate(45deg);
+        position: relative;
+        top: 8px;
+    }
+    span:nth-child(2) {
+        opacity: 0;
+    }
+    span:last-child {
+        transform: rotate(-45deg);
+        position: relative;
+        top: -8px;
+    }
+}
+
+
+// ** MOBILE MENU
+
+.mobile-menu {
+    z-index: 2;
+    font-family: $fontDetail;
+    display: none;
+    position: absolute;
+    left: 1.5rem;
+    right: 1.5rem;
+    top: 7.8rem;
+    background: $neuWhite;
+    padding: 1.5rem;
+    @include borderRadiusSmall;
+    text-align: center;
+    font-weight: 600;
+
+    ul {
+        list-style: none;
+        padding-inline-start: 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.mobile-menu--active {
+    display: block;
+}
+
+// Mobile menu first list
+
+.mobile-menu__first-ul {
+    color: $neuVeryDarkBlue;
+    cursor: pointer;
+    li {
+        line-height: 250%;
+    }
+}
+
+// Mobile menu second list
+
+.mobile-menu__second-ul {
+    background-color: hsla(240, 2%, 79%, 0.25);
+    @include verticalPadding(1rem);
+    margin: 1rem 0;
+    @include borderRadiusSmall;
+    a {
+        color: $neuDarkBlue;
+        &:hover {
+            color: $neuVeryDarkBlue;
+        }
+    }
+}
+
+// Mobile menu list-button / active
+
+.mobile-menu__list-button {
+
+    .mobile-menu__second-ul {
+        display: none;
+    }
+
+    p::after {
+        background-image: url("/images/icon-arrow-dark.svg");
+        display: inline-block;;
+        content: " ";
+        width: 10px;
+        height: 7px;
+        background-size: 10px 7px;
+        margin-left: 5px;
+        transition: 0.1s ease-in;
+    }
+
+    &--active {
+        .mobile-menu__second-ul {
+            display: block;
+        }
+
+        p::after {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+
+// ** DESKTOP MENU
+
+.desktop-menu {
+    font-family: $fontDetail;
+    display: flex;
+    color: $neuWhite;
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.desktop-menu__first-ul {
+    display: flex;
+}
+
+.desktop-menu__list-button {
+    position: relative;
+    margin-left: 1rem;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+    
+    p::after {
+        background-image: url("/images/icon-arrow-light.svg");
+        display: inline-block;;
+        content: " ";
+        width: 10px;
+        height: 7px;
+        background-size: 10px 7px;
+        margin-left: 10px;
+        transition: 0.2s ease-out;
+    }
+}
+
+.desktop-menu__list-button--active {
+    p::after {
+        transform: rotate(180deg);
+        margin-bottom: 2px;
+    }
+    .desktop-menu__second-ul {
+        display: block;
+        position: absolute;
+        top: 2rem;
+    }
+}
+
+.desktop-menu__second-ul {
+    width: 10rem;
+    display: none;
+    position: relative;
+    top: 1rem;
+    left: -2rem;
+    background-color: $neuWhite;
+    color: $neuDarkBlue;
+    padding: 2rem;
+    @include borderRadiusSmall;
+
+    a:hover {
+        font-weight: 600;
+    }
+}
