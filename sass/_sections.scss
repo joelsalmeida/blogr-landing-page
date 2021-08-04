@@ -12,6 +12,23 @@
     @include verticalPadding(7rem);
 }
 
+.dark-section {
+    position: relative;
+    background-image: url("/images/bg-pattern-circles.svg") ,
+    linear-gradient(135deg ,$graBlue, $graDesaturatedBlue);
+    background-size: cover;
+    text-align: center;
+    padding-top: 14rem;
+    padding-bottom: 7rem;
+    margin-top: 9rem;
+    width: 100%;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    @media (min-width: $largeScreens) {
+        padding-top: 7rem;
+    }
+}
+
 .full-width--top {
     background-image: url("/images/bg-pattern-intro.svg"),
     linear-gradient(135deg, $graLightRed, $graRed);

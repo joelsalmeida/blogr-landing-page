@@ -1,0 +1,50 @@
+@use "variables"as *;
+@use "globals"as *;
+@use "mixins" as *;
+
+.footer {
+    background-color: $neuVeryDarkBlue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-top-right-radius: 100px;
+    @include verticalPadding(5rem);
+}
+
+.footer-nav {
+    color: $neuWhite;
+    text-align: center;
+
+    ul {
+        list-style-type: none;
+        padding-inline-start: 0;
+        margin-bottom: 2.5rem;
+
+        li {
+            line-height: 200%;
+        }
+
+        &::first-line {
+            line-height: 500%;
+            font-weight: 600;
+        }
+    }
+
+    a {
+        color: $neuBlue;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    @media (min-width: $largeScreens) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.logo-footer {
+    margin-bottom: 4rem;
+}

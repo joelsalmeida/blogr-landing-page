@@ -4,6 +4,7 @@
 @use "mixins" as *;
 @use "header" as *;
 @use "sections" as *;
+@use "footer" as *;
 
 // ** CENTER EVERYTHING
 
@@ -15,8 +16,6 @@ body {
     right: 0;
     display: grid;
     place-items: center;
-
-    // background-color: coral;
 }
 
 .flex {
@@ -39,6 +38,12 @@ body {
     @include horizontalPadding(1.5rem)
 }
 
+.container-footer {
+    @media (min-width: $largeScreens) {
+        max-width: 65%;
+    }
+}
+
 .buttons-container {
     display: flex;
     justify-content: center;
@@ -46,12 +51,25 @@ body {
 }
 
 
+// Container Columns
 
 .two-columns {
     @media (min-width: $largeScreens) {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
+        align-items: center;
+        margin: 0 auto;
+        text-align: left;
+    }
+}
+
+.two-columns-2 {
+    @media (min-width: $largeScreens) {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+        width: 100%;
         align-items: center;
         margin: 0 auto;
         text-align: left;
@@ -67,6 +85,7 @@ body {
     grid-column: 2;
     grid-row: 1;
 }
+
 
 // ** TITLES
 
@@ -104,6 +123,21 @@ body {
     margin-bottom: 2rem;
 }
 
+// Dark section title
+.ds-title {
+    color: $neuWhite;
+    font-size: 2.2rem;
+    line-height: 130%;
+    margin-bottom: 1rem;
+    @include horizontalPadding(1.75em);
+
+    @media (min-width: $largeScreens) {
+        text-align: left;
+        padding-left: 2rem;
+    }
+}
+
+
 // ** CONTENTS & IMAGES
 
 .content {
@@ -119,8 +153,36 @@ body {
     margin-bottom: 2.5rem;
 }
 
+// Dark section content
+.ds-content {
+    color: $neuWhite;
+    @include horizontalPadding(2em);
+
+    @media (min-width: $largeScreens) {
+        text-align: left;
+        max-width: 35em;
+    }
+}
+
+// Images / DS Images
+
 .mobile-img {
     max-width: 100%;
+}
+
+.ds-img {
+    position: absolute;
+    @media (min-width: $largeScreens) {
+        transform: translate(-50%, -50%);
+        left: 25%;
+        top: 30%;
+    }
+
+    @media (max-width: $smallScreens) {
+        transform: translate(-50%);
+        top: -12rem;
+        max-width: 375px;
+    }
 }
 
 
@@ -137,6 +199,7 @@ body {
     font-weight: 600;
     border-radius: 2rem;
     padding: 0.7rem 1rem 0.8rem 1rem;
+    transition: 0.3s;
     
     &:hover {
         mix-blend-mode: normal;
@@ -173,5 +236,31 @@ body {
     display: none;
     @media (min-width: $largeScreens) {
         display: inherit;
+    }
+}
+
+
+// Attribution
+.attribution {
+    background-color: $neuVeryDarkBlue;
+    width: 100%;
+    text-align: center;
+    color: $neuBlue;
+    padding: 1em;
+    font-size: 0.8rem;
+    border-top: dotted 2px rgb(63, 63, 63);
+
+    a{
+        transition: 0.5s;
+        color: $neuWhite;
+        text-decoration: none;
+        
+        &:hover {
+            color: $priLightRed;
+        }
+    }
+
+    @media (min-width: $largeScreens) {
+        padding-left: 40%;
     }
 }

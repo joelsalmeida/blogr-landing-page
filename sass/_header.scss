@@ -26,6 +26,7 @@
     z-index: 2;
     cursor: pointer;
     @include verticalPadding(7px);
+    
     span {
         display: block;
         width: 32px;
@@ -33,6 +34,7 @@
         background-color: $neuWhite;
         transition: 0.1s ease-in-out;
     }
+    
     span + span {
         margin-top: 6px;
     }
@@ -46,9 +48,11 @@
         position: relative;
         top: 8px;
     }
+
     span:nth-child(2) {
         opacity: 0;
     }
+
     span:last-child {
         transform: rotate(-45deg);
         position: relative;
@@ -92,6 +96,7 @@
 .mobile-menu__first-ul {
     color: $neuVeryDarkBlue;
     cursor: pointer;
+    
     li {
         line-height: 250%;
     }
@@ -104,6 +109,7 @@
     @include verticalPadding(1rem);
     margin: 1rem 0;
     @include borderRadiusSmall;
+    
     a {
         color: $neuDarkBlue;
         &:hover {
@@ -115,7 +121,6 @@
 // Mobile menu list-button / active
 
 .mobile-menu__list-button {
-
     .mobile-menu__second-ul {
         display: none;
     }
@@ -149,6 +154,7 @@
     font-family: $fontDetail;
     display: flex;
     color: $neuWhite;
+
     ul {
         list-style: none;
     }
