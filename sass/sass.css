@@ -206,7 +206,7 @@ main {
 
 .dark-section {
   position: relative;
-  background-image: url("/images/bg-pattern-circles.svg"), linear-gradient(135deg, #2c2d3f, #3f4164);
+  background-image: url("images/bg-pattern-circles.svg"), linear-gradient(135deg, #2c2d3f, #3f4164);
   background-size: cover;
   text-align: center;
   padding-top: 14rem;
