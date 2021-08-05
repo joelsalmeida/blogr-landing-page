@@ -1,4 +1,4 @@
-// HAMBURGER MENU TOGGLE
+// ** DESKTOP AND HAMBURGER MENU FUNCTIONS
 
 let hamburgerMenu = document.querySelector(".hamburger-menu");
 
@@ -6,6 +6,31 @@ let mobileMenu = document.querySelector(".mobile-menu");
 
 let mobileMenuButton = document.getElementsByClassName("mobile-menu__list-button");
 
+
+// Reset menus according to screen
+
+function resetMenus() {
+    
+    if (window.innerWidth > 1024) {
+
+        mobileMenu.classList.remove("mobile-menu--active");
+        hamburgerMenu.classList.remove("hamburger-menu--active");
+
+    } else if (window.innerWidth < 1025) {
+
+        let desktopMenuButton = document.getElementsByClassName("desktop-menu__list-button");
+        
+        for (let index = 0; index < desktopMenuButton.length; index++) {
+            desktopMenuButton[index].classList.remove("desktop-menu__list-button--active");
+        }
+        
+    }
+}
+
+window.addEventListener("resize", resetMenus);
+
+
+// Hamburger menu toggle
 
 hamburgerMenu.addEventListener("click", function() {
 
@@ -23,6 +48,8 @@ hamburgerMenu.addEventListener("click", function() {
     } 
 })
 
+
+// Mobile menu toggle
 
 for (let index = 0; index < mobileMenuButton.length; index++) {
 
@@ -43,6 +70,7 @@ for (let index = 0; index < mobileMenuButton.length; index++) {
     })
     
 }
+
 
 // DESKTOP MENU TOGGLE
 
