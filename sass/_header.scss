@@ -126,7 +126,7 @@
     }
 
     p::after {
-        background-image: url("/images/icon-arrow-dark.svg");
+        background-image: url("../images/icon-arrow-dark.svg");
         display: inline-block;;
         content: " ";
         width: 10px;
@@ -179,7 +179,7 @@
     }
     
     p::after {
-        background-image: url("/images/icon-arrow-light.svg");
+        background-image: url("../images/icon-arrow-light.svg");
         display: inline-block;;
         content: " ";
         width: 10px;
