@@ -14,7 +14,7 @@
 
 .dark-section {
     position: relative;
-    background-image: url("https://joelsalmeida.github.io/blogr-landing-page/images/bg-pattern-circles.svg") ,
+    background-image: url("../images/bg-pattern-circles.svg") ,
     linear-gradient(135deg ,$graBlue, $graDesaturatedBlue);
     background-size: cover;
     text-align: center;
@@ -30,7 +30,7 @@
 }
 
 .full-width--top {
-    background-image: url("https://joelsalmeida.github.io/blogr-landing-page/images/bg-pattern-intro.svg"),
+    background-image: url("../images/bg-pattern-intro.svg"),
     linear-gradient(135deg, $graLightRed, $graRed);
     background-repeat: no-repeat;
     background-attachment: fixed;

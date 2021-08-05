@@ -120,7 +120,7 @@ main {
   display: none;
 }
 .mobile-menu__list-button p::after {
-  background-image: url("https://joelsalmeida.github.io/blogr-landing-page/images/icon-arrow-dark.svg");
+  background-image: url("../images/icon-arrow-dark.svg");
   display: inline-block;
   content: " ";
   width: 10px;
@@ -162,7 +162,7 @@ main {
   text-decoration: underline;
 }
 .desktop-menu__list-button p::after {
-  background-image: url("https://joelsalmeida.github.io/blogr-landing-page/images/icon-arrow-light.svg");
+  background-image: url("../images/icon-arrow-light.svg");
   display: inline-block;
   content: " ";
   width: 10px;
@@ -206,7 +206,7 @@ main {
 
 .dark-section {
   position: relative;
-  background-image: url("https://joelsalmeida.github.io/blogr-landing-page/images/bg-pattern-circles.svg"), linear-gradient(135deg, #2c2d3f, #3f4164);
+  background-image: url("../images/bg-pattern-circles.svg"), linear-gradient(135deg, #2c2d3f, #3f4164);
   background-size: cover;
   text-align: center;
   padding-top: 14rem;
@@ -223,7 +223,7 @@ main {
 }
 
 .full-width--top {
-  background-image: url("https://joelsalmeida.github.io/blogr-landing-page/images/bg-pattern-intro.svg"), linear-gradient(135deg, #ff8f70, #ff3d54);
+  background-image: url("../images/bg-pattern-intro.svg"), linear-gradient(135deg, #ff8f70, #ff3d54);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 30% 55%;
